@@ -142,6 +142,6 @@ app.post("/delete", function(req, res) {
   }
 });
 
-app.listen(3000, function() {
-  console.log("Server has started successfully");
+app.listen(process.env.PORT || 3000, function() { //process.env.PORT to launch on Heroku server, 3000 to launch localy
+  console.log("app is running on port 3000");
 });
